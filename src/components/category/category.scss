@@ -1,0 +1,51 @@
+@import "../../style.scss";
+
+.category {
+  @include themify($themes) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: themed("bgSoft");
+      border-radius: 18px;
+      padding: 20px;
+      gap: 20px;
+      .icon {
+        color: themed("btnColor");
+        border: 1px solid themed("border");
+        border-radius: 10px;
+        padding: 10px;
+      }
+      .title {
+        display: flex;
+        flex-direction: column;
+        .heading {
+          color: themed("textColorSoft");
+          font-size: 20px;
+        }
+        span {
+          color: themed("textColor");
+          font-size: 16px;
+        }
+        p {
+          font-size: 12px;
+        }
+      }
+      .btn {
+        display: flex;
+        button {
+          background-color: themed("btnColor");
+          border: none;
+          border-radius: 8px;
+          color: themed("textColor");
+          top: 0;
+          right: 0;
+        }
+      }
+    }
+  }
+}
